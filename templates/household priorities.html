@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Household Priorities of Expenditure</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+
+
+    <style>
+            body {
+                background-color: light blue;
+        }
+            p {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 80px;
+                margin-left: 80px;
+        }
+            table {
+                border: 1px solid black;
+                border-collapse: collapse;
+                width:100%
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 40px;
+                margin-left: 40px;
+
+        }
+            th, td {
+                border: 1px solid black;
+                width:50px;
+                text-align:center;
+                border:1px solid black;
+                padding:5px
+        }
+            th{
+            text-align: center;
+            background-color: grey;
+            color:white;
+        }
+            td{
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <h1> Household Priorities of Expenditure Information </h1>
+    </center>
+    <div class="container">
+        <table id="household-table" class="table-tool">
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Household_id</th>
+                        <th>Priority
+                            _Groceries</th>
+                        <th>Priority
+                            _Cooked
+                            _Food</th>
+                        <th>Priority
+                            _Education</th>
+                        <th>Priority
+                            _House</th>
+                        <th>Priority
+                            _Health</th>
+                        <th>Priority
+                            _Transport</th>
+                        <th>Priority
+                            _Electricity</th>
+                        <th>Priority
+                            _Water</th>
+                        <th>Priority
+                            _Sanitation</th>
+                        <th>Priority
+                            _Waste
+                            _Collection</th>
+                        <th>Priority
+                            _Cooking
+                            _Fuel</th>
+                        <th>Priority
+                            _Internet</th>
+                        <th>Priority
+                            _Communication</th>
+                        <th>Priority
+                            _Loan
+                            _Repayment</th>
+                        <th>Priority
+                            _Other</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in value %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                        <td>{{row[5]}}</td>
+                        <td>{{row[6]}}</td>
+                        <td>{{row[7]}}</td>
+                        <td>{{row[8]}}</td>
+                        <td>{{row[9]}}</td>
+                        <td>{{row[10]}}</td>
+                        <td>{{row[11]}}</td>
+                        <td>{{row[12]}}</td>
+                        <td>{{row[13]}}</td>
+                        <td>{{row[14]}}</td>
+                        <td>{{row[15]}}</td>
+                        <td>{{row[16]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#household-table").dataTable();
+        });
+    </script>
+</body>
+</html>

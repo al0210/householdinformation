@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Household Age</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <style>
+            body {
+                background-color: light blue;
+        }
+            p {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 80px;
+                margin-left: 80px;
+        }
+            table {
+                border: 1px solid black;
+                border-collapse: collapse;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 40px;
+                margin-left: 40px;
+
+        }
+            th, td {
+                border: 1px solid black;
+                width:50px;
+                text-align:center;
+                border:1px solid black;
+                padding:5px
+        }
+            th{
+            text-align: center;
+            background-color: grey;
+            color:white;
+        }
+            td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1> Household Age Information </h1>
+    </center>
+    <center>
+        <select class="household_age" data-attribute="class">
+            <option value="All">Filter by International Poverty Line (IPL)</option>
+            <option value="Single Parent/Grandparent">Single Parent/Grandparent</option>
+            <option value="Single Member">Single Member</option>
+            <option value="Nuclear Family">Nuclear Family</option>
+            <option value="Childless Family">Childless Family</option>
+        </select>
+        <script type="text/javascript" src="filterage.js"></script>
+    </center>
+    <div class="container">
+        <table id="household-table" class="table-tool">
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Household_id</th>
+                        <th>Age
+                            _M1</th>
+                        <th>Age
+                            _M2</th>
+                        <th>Age
+                            _M3</th>
+                        <th>Age
+                            _M4</th>
+                        <th>Age
+                            _M5</th>
+                        <th>Age
+                            _M6</th>
+                        <th>Age
+                            _M7</th>
+                        <th>Age
+                            _M8</th>
+                        <th>Age
+                            _M9</th>
+                        <th>Age
+                            _M10</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in value %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                        <td>{{row[5]}}</td>
+                        <td>{{row[6]}}</td>
+                        <td>{{row[7]}}</td>
+                        <td>{{row[8]}}</td>
+                        <td>{{row[9]}}</td>
+                        <td>{{row[10]}}</td>
+                        <td>{{row[11]}}</td>
+                        <td>{{row[12]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#household-table").dataTable();
+        });
+    </script>
+</body>
+</html>
