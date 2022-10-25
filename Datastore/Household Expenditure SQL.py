@@ -22,7 +22,7 @@ data = []     # variable to store the data collected from the database execution
 for i in dbcursor:
     data.append(i)
 query = "insert into `table_household_expenditure`(`region`, `household_id`, `expenditure_cooked_food`,  `expenditure_house`, `expenditure_electricity`, `expenditure_water`, `expenditure_sanitation`, `expenditure_waste_collection`, `expenditure_cooking_fuel`, `expenditure_internet`, `expenditure_communication`, `expenditure_other`, `expenditure_transport`, `total_expenditure`) values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-# to insert the given data into the designated table - table_household_gender
+# to insert the given data into the designated table - table_household_expenditure
 dbcursor.executemany(query, data)
 # executed the operation to store the data in the variable data into the database
 mydb.commit()
