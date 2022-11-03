@@ -13,7 +13,7 @@ The home page of the application contains a brief description of the website and
 
 **Directory Structure**
 
-The directory contains four folders with all the project documents and one README file which contains the guide to the project. The following is a brief description of each component in the directory.
+The directory contains five folders with all the project documents and one README file which contains the guide to the project. The following is a brief description of each component in the directory.
 
 1. _**Database**_ - This folder contains a .sql file - household_db.sql - containing all the databases developed and used during the course of the project.
 
@@ -35,7 +35,21 @@ vii) _task_2_data.csv_ - Contains the data from which the household information 
 
 3. _**Web Interface Tool**_ - This folder contains Tool Code.py file which has the code for the development of the web interface tool.
 
-4. _**templates**_ - This folder contains 6 .html files and 4 .js files which were used to develop the web interace and tool with features.
+4. _**templates**_ - This folder contains 6 .html files which were used to develop the web interace and tool with features.
+
+i) _home.html_ - Contains the code run to develop the page containing information about the home page of the web interface tool.
+
+ii) _household age.html_ - Contains the code run to develop the page containing household age information.
+
+iii) _household expenditure.html_ - Contains the code run to develop the page containing household expenditure information.
+
+iv) _household gender.html_ - Contains the code run to develop the page containing household gender information.
+
+v) _household income.html_ - Contains the code run to develop the page containing household income information.
+
+vi) _household priorities.html_ - Contains the code run to develop the page containing household prioritioes of expenditure information.
+
+4. _**templates**_ - This folder contains one js folder which further contains the 4 .js which were used to develop the web interace and tool with features.
 
 i) _filterage.js_ - Contains the code run to develop the filter features for the web page household age.html
 
@@ -44,18 +58,6 @@ ii) _filterexpenditure.js_ - Contains the code run to develop the filter feature
 iii) _filtergender.js_ - Contains the code run to develop the filter features for the web page household gender.html
 
 iv) _filterincome.js_ - Contains the code run to develop the filter features for the web page household income.html
-
-v) _home.html_ - Contains the code run to develop the page containing information about the home page of the web interface tool.
-
-vi) _household age.html_ - Contains the code run to develop the page containing household age information.
-
-vii) _household expenditure.html_ - Contains the code run to develop the page containing household expenditure information.
-
-viii) _household gender.html_ - Contains the code run to develop the page containing household gender information.
-
-ix) _household income.html_ - Contains the code run to develop the page containing household income information.
-
-x) _household priorities.html_ - Contains the code run to develop the page containing household prioritioes of expenditure information.
 
 
 **Build Instructions**
